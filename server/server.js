@@ -73,6 +73,7 @@ app.delete('/todos/:id' ,(req,res) => {
 
 });
 
+////// patch ///////
 app.patch('/todos/:id', (req,res) => {
   var id = req.params.id;
   var body = _.pick(req.body,['text','completed']);
