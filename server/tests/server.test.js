@@ -176,7 +176,7 @@ describe('GET /users/me', () => {
   it('should return user if authenticated', (done) => {
     request(app)
       .get('/users/me')
-      .set('x-auth', users.tokens[0].token)
+      .set('x-auth', users[0].tokens[0].token)
       .expect(200)
       .expect((res) => {
         expect(res.body._id).toBe(users[0]._id.toHexString());
